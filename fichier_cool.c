@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void super_guesser(int nb)
 {
@@ -9,3 +10,11 @@ void super_guesser(int nb)
     dprintf(1, "\nI think your number is %d !\n", nb);
     dprintf(1, "I'm so smart omg!!!\n");
 }
+
+int main(int ac, char const **argv)
+{
+    if (ac > 1 && atoi(argv[1]) > 0)
+        super_guesser(atoi(argv[1]));
+}
+
+// gcc fichier_cool.c -o binary
